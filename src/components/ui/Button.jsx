@@ -1,7 +1,7 @@
 
 const Button = ({btnName}) => {
   return (
-    <button className="hidden md:block text-lg font-semibold px-6 py-1 rounded border-2 hover:text-indigo-600  cursor-pointer active:bg-amber-300">
+    <button className="hidden md:block text-md font-semibold px-6 py-2 rounded-lg border-2   hover:bg-black hover:text-white  cursor-pointer transition">
       {btnName}
     </button>
   );
