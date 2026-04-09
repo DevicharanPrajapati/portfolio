@@ -1,48 +1,66 @@
-
+import { useEffect, useRef } from "react";
+import lottie from "lottie-web";
+import devAnimation from "../assets/dev-animation.json";
 
 const HeroSection = () => {
+  const container = useRef(null);
+
+  useEffect(() => {
+    const anim = lottie.loadAnimation({
+      container: container.current,
+      animationData: devAnimation,
+      loop: true,
+    });
+
+    return () => anim.destroy(); // cleanup
+  }, []);
+
   return (
-   <div className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden">
+    <div className="flex flex-col md:flex-row items-center min-h-screen px-20">
       
-      {/* Dotted Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle,_#d1d5db_1px,_transparent_1px)] bg-[size:20px_20px]"></div>
+      {/* LEFT */}
+      <div className="w-full md:w-1/2 space-y-6 text-center md:text-left">
 
-      {/* Content */}
-      <div className="relative z-10 text-center px-4">
-        
-        {/* Logo */}
-        <div className="inline-block bg-yellow-400 px-6 py-3 border-4 border-black shadow-[6px_6px_0px_black] mb-6">
-          <h1 className="text-2xl font-bold">Devicharan</h1>
-        </div>
+  {/* SMALL INTRO */}
+  <p className="text-sm text-gray-400 uppercase tracking-widest">
+    Welcome to my portfolio
+  </p>
 
-        {/* Heading */}
-        <h2 className="text-3xl md:text-5xl font-bold mb-4">
-          Frontend Developer
-        </h2>
+  {/* MAIN HEADING */}
+  <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+    Hi, I'm{" "}
+    <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
+      Devicharan
+    </span>
+  </h1>
 
-        {/* Description */}
-        <p className="text-gray-600 max-w-xl mx-auto mb-6">
-          I build responsive and modern websites with clean design and smooth user experience.
-        </p>
+  {/* SUBTEXT */}
+  <p className="text-gray-500 text-lg max-w-md">
+    I build modern, responsive and high-performance web applications 
+    using React and JavaScript.
+  </p>
 
-        {/* Buttons */}
-        <div className="flex justify-center gap-4 flex-wrap">
-          
-          <button className="bg-black text-white px-6 py-2 rounded 
-          hover:bg-gray-800 transition">
-            View Projects
-          </button>
+  {/* BUTTONS */}
+  <div className="flex gap-4 justify-center md:justify-start">
+    
+    <button className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition">
+      View Projects
+    </button>
 
-          <button className="border-2 border-black px-6 py-2 rounded 
-          hover:bg-black hover:text-white transition">
-            Contact Me
-          </button>
+    <button className="border border-gray-400 px-6 py-3 rounded-lg hover:bg-gray-100 transition">
+      Contact Me
+    </button>
 
-        </div>
+  </div>
 
+</div>
+      {/* RIGHT */}
+      <div className="w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
+        <div ref={container} className="w-[300px] md:w-[450px]" />
       </div>
-    </div>
-  )
-}
 
-export default HeroSection
+    </div>
+  );
+};
+
+export default HeroSection;
