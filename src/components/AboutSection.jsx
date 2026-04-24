@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "./ui/Title";
-import myImage from "../assets/images/hero-image.png";
+import myImage from "../assets/images/Devicharan.png";
 
 const AboutSection = () => {
     const abtTIitle = "About";
