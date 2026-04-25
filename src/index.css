@@ -1,1 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Fredoka:wght@300..700&family=Orbitron:wght@400..900&family=Righteous&family=Space+Grotesk:wght@300..700&display=swap');
 @import "tailwindcss";
+
+@theme{
+ --font-fredoka: 'Fredoka', sans-serif;
+ --font-righteous: 'Righteous', sans-serif;
+ --font-exo: 'Exo 2', sans-serif;
+ --font-orbitron: 'Orbitron', sans-serif;
+ --font-space: 'Space Grotesk', sans-serif;
+
+}
+

@@ -1,0 +1,16 @@
+.hero-main .intro{
+  -webkit-text-stroke: 3px rgb(30, 29, 29);
+  color:transparent;
+}
+@media screen and (max-width: 768px) {
+  .hero-main .intro{
+    -webkit-text-stroke: 2px rgb(30, 29, 29);
+    color:transparent;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero-main .intro{
+    -webkit-text-stroke: 1px rgb(30, 29, 29);
+    color:transparent;
+  } 
+}
