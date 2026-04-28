@@ -2,6 +2,7 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import HeroSection from "./components/HeroSection";
 import SkillSection from "./components/SkillSection";
+import ProjectSection from "./components/ProjectSection";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
     <Header/>
     <HeroSection/>
     <SkillSection />
+    <ProjectSection />
     {/* <Footer /> */}
     </>
   );

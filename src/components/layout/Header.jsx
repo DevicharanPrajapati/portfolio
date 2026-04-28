@@ -1,74 +1,76 @@
 import { useGSAP } from "@gsap/react";
-import React, {useRef } from "react";
+import React, { useRef } from "react";
 import gsap from "gsap";
 import "./Header.css";
 import { GiFallingStar } from "react-icons/gi";
 import { CiSaveDown2 } from "react-icons/ci";
 import { IoIosCloseCircle } from "react-icons/io";
+import ProfileCard from "../ui/ProfileCard";
+gsap.registerPlugin(useGSAP);
 
 const Header = () => {
   const navRef = useRef();
+  const tl = useRef();
+  const menuRef = useRef();
 
   useGSAP(
     () => {
-      
       const tl = gsap.timeline();
       tl.from("p", {
-        y: -20,
+        x: -10,
         opacity: 0,
-        duration: 0.7,
+        duration: 0.5,
         ease: "power3.out",
       })
 
         .from(
           "li",
           {
-            y: -10,
             opacity: 0,
-            duration: 0.5,
+            duration: 0.3,
             ease: "power3.out",
             stagger: 0.2,
           },
-          "-=0.3",
+          "-=0.2",
         );
     },
     { scope: navRef },
   );
 
-  function menuOnClick() {
- 
-}
- useGSAP(() => {
-  const tmenu = gsap.timeline({ paused: false });
-
-  tmenu.to(".mobile-menu", {
-      right: "0",
-      duration: 0.5,
-      ease: "power3.out",
-    })
-    .from(".mobile-menu li", {
-      y: -20,
-      opacity: 0,
-      stagger: 0.2,
-    })
-    .from(
-      ".mobile-menu button",
-      {
+  const menuOnClick = () => {
+    tl.current.reversed(!tl.current.reversed());
+  };
+  useGSAP(() => {
+    tl.current = gsap
+      .timeline()
+      .to(menuRef.current, {
+        x: "0%",
+        duration: 0.5,
+        ease: "power3.out",
+      })
+      .from(".mobile-menu li", {
         y: -20,
         opacity: 0,
-      },
-      "-=0.3"
-    )
-    .from(
-      ".mobile-menu .close-menu",
-      {
-        x: 20,
-        opacity: 0,
-      },
-      "-=0.5"
-    );
-
-}, []);
+        stagger: 0.2,
+      })
+      .from(
+        ".mobile-menu button",
+        {
+          y: -20,
+          opacity: 0,
+        },
+        "-=0.3",
+      )
+      .from(
+        ".mobile-menu .close-menu",
+        {
+          x: 20,
+          opacity: 0,
+        },
+        "-=0.5",
+      )
+      .reverse();
+  }, []);
   return (
     <>
       <nav
@@ -83,8 +85,8 @@ const Header = () => {
         <ul className=" hidden md:flex gap-12 text-md  items-center font-exo">
           <li className="cursor-pointer hover:text-indigo-700 ">Home</li>
           <li className="cursor-pointer  hover:text-indigo-700">Skills</li>
-          {/* <li className="cursor-pointer hover:text-indigo-700 ">Skills</li> */}
           <li className="cursor-pointer hover:text-indigo-700 ">Projects</li>
+          <li className="cursor-pointer hover:text-indigo-700 ">Profile</li>
           <li className="cursor-pointer hover:text-indigo-700 ">Contact</li>
         </ul>
         <button className="flex justify-center gap-2 items-center px-4 py-2 border-2 border-black rounded-md text-bold font-exo text-md">
@@ -100,10 +102,14 @@ const Header = () => {
       </nav>
 
       {/* Mobile menu */}
-      <div className="mobile-menu bg-white-50 backdrop-blur-sm rounded-md p-4 shadow-lg w-[30%] h-screen absolute top-0 -right-[30%] z-50  ">
+      <div
+        className="mobile-menu fixed top-0 right-0 w-[70%] h-screen bg-white z-50 translate-x-full backdrop:blur-sm p-5"
+        ref={menuRef}
+      >
         <IoIosCloseCircle
           size={40}
           className="close-menu absolute top-4 right-5 cursor-pointer"
+          onClick={menuOnClick}
         />
         <div className="flex flex-col gap-10">
           <ul className="flex flex-col gap-8 text-xl pl-10 font-exo mt-10 cursor-pointer">
@@ -118,6 +124,7 @@ const Header = () => {
           </button>
         </div>
       </div>
+      {/* <ProfileCard /> */}
     </>
   );
 };
