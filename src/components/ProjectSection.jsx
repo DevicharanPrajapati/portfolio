@@ -48,7 +48,7 @@ const ProjectSection = () => {
         <h2 className="text-center p-2 text-3xl font-fredoka font-bold ">
           Projects
         </h2>
-        <div ref={lineRef} className=" border-2 rounded-2xl w-25 m-auto"></div>
+        <div ref={lineRef} className=" border-2 rounded-2xl w-25 m-auto mb-10"></div>
          <div className="project-cardRow flex justify-around gap-10 p-4">
         {projectCartData.map((item)=>(
           <ProjectCard

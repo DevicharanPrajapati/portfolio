@@ -3,6 +3,7 @@ import Footer from "./components/layout/Footer";
 import HeroSection from "./components/HeroSection";
 import SkillSection from "./components/SkillSection";
 import ProjectSection from "./components/ProjectSection";
+import ContactSection from "./components/ContactSection";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
     <HeroSection/>
     <SkillSection />
     <ProjectSection />
-    {/* <Footer /> */}
+    <ContactSection />
+    <Footer />
     </>
   );
 }
