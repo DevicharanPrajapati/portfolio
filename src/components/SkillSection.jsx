@@ -12,18 +12,18 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-// import { useRef } from "react";
+import { useRef } from "react";
 
 const SkillSection = () => {
-  // const boxRef = useRef();
+  const lineRef = useRef();
   useGSAP(() => {
-    gsap.from(".Skill-main .line", {
+    gsap.from(lineRef.current, {
       width: 0,
       duration: 0.7,
       opacity: 0,
       ease: "power3.out",
       scrollTrigger: {
-        trigger: ".line",
+        trigger: lineRef.current,
         start: "top 90%",
         toggleActions: "play none none reverse",
       },
@@ -59,11 +59,11 @@ const SkillSection = () => {
 
   return (
     <div>
-      <div className="Skill-main h-screen w-full px-10  mt-7">
+      <div className="Skill-main min-h-screen w-full px-10  mt-7">
         <h2 className="text-center p-2 text-3xl font-fredoka font-bold ">
           My Skills
         </h2>
-        <div className="line h-1 border-2 rounded-2xl w-25 m-auto"></div>
+        <div ref={lineRef} className=" h-1 border-2 rounded-2xl w-25 m-auto"></div>
 
         <h3 className="skill-core text-center text-2xl mt-10 font-semibold font-fredoka">
           Frontend Core Skills
