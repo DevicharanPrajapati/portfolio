@@ -41,27 +41,27 @@ const ContactSection = () => {
 
             <div className="flex flex-col">
               <label htmlFor="name" className="font-space font-semibold">Full Name</label>
-              <input type="text" name="name" className="py-2 rounded-md shadow-md outline-none border-1 shadow-amber-300" />
+              <input type="text" name="name" className="py-2 rounded-md shadow-md outline-none border-1 shadow-gray-300" />
             </div>
 
             <div className="flex flex-col">
               <label htmlFor="email" className="font-space font-semibold">Email</label>
-              <input type="email" name="email" className="py-2 rounded-md shadow-md outline-none border-1 shadow-amber-300" />
+              <input type="email" name="email" className="py-2 rounded-md shadow-md outline-none border-1 shadow-gray-300" />
             </div>
 
             <div className="flex flex-col">
               <label htmlFor="num" className="font-space font-semibold">Mobile Number</label>
-              <input type="number" name="num" className="py-2 rounded-md shadow-md outline-none border-1 shadow-amber-300"/>
+              <input type="number" name="num" className="py-2 rounded-md shadow-md outline-none border-1 shadow-gray-300"/>
             </div>
 
              <div className="flex flex-col">
               <label htmlFor="feedback" className="font-space font-semibold">Feedback</label>
-              <textarea name="feedback" rows={2} className="py-2 rounded-md shadow-md outline-none border-1 shadow-amber-300"></textarea>
+              <textarea name="feedback" rows={2} className="py-2 rounded-md shadow-md outline-none border-1 shadow-gray-300"></textarea>
             </div>
             
             
              <div className="flex flex-col items-center">
-              <button type="submit" className="border-2 font-space font-semibold py-2 px-4 w-[30%] rounded-md hover:bg-sky-400 transition-all ease-in-out">Send Message</button>
+              <button type="submit" className="border-2 font-space font-semibold py-2 px-4 w-[30%] rounded-md shadow-2xl shadow-gray-400 hover:bg-sky-400 transition-all ease-in-out">Send Message</button>
             </div>
             
           </form>

@@ -1,3 +1,4 @@
+gsap.registerPlugin(ScrollTrigger);
 import ProjectCard from "./ui/ProjectCard";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -26,6 +27,11 @@ const ProjectSection = () => {
     id: 4,
     title: "E-Commerce Website",
     description: "Lorem ipsum..."
+  },
+  {
+    id:5,
+    title: "Live Chat",
+    description:"skdfnisnfs dfierfwr rgoror"
   }
 ];
   useGSAP(() => {
@@ -49,7 +55,7 @@ const ProjectSection = () => {
           Projects
         </h2>
         <div ref={lineRef} className=" border-2 rounded-2xl w-25 m-auto mb-10"></div>
-         <div className="project-cardRow flex justify-around gap-10 p-4">
+         <div className="project-cardRow flex justify-center gap-8 p-6">
         {projectCartData.map((item)=>(
           <ProjectCard
            key={item.id} 

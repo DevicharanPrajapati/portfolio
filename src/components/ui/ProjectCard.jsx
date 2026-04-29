@@ -8,11 +8,11 @@ import { SiTailwindcss } from "react-icons/si";
 const ProjectCard = ({ title, description}) => {
  
   return (
-      <div className="card w-80 p-4 flex justify-between flex-col gap-3 shadow-2xl shadow-amber-500 rounded-2xl">
+      <div className="card w-80 p-4 flex justify-between flex-col gap-3 border-1 rounded-2xl hover:shadow-xl shadow-gray-400 transition-all ease-in-out">
         <div className="rounded-2xl overflow-hidden shadow-2xs shadow-olive-500">
           <img src="https://png.pngtree.com/thumb_back/fh260/background/20240610/pngtree-computer-of-a-programmer-with-lines-code-of-software-image_15746003.jpg" />
         </div>
-        <h3 className="font-fredoka font-semibold text-2xl">
+        <h3 className="font-fredoka font-semibold text-xl">
           {title}
         </h3>
         <p>
