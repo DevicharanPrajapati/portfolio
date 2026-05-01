@@ -4,7 +4,7 @@
 }
 @media screen and (max-width: 768px) {
   .hero-main .intro{
-    -webkit-text-stroke: 2px rgb(30, 29, 29);
+    -webkit-text-stroke: 1px rgb(30, 29, 29);
     color:transparent;
   }
 }

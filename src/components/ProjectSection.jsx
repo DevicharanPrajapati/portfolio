@@ -50,12 +50,12 @@ const ProjectSection = () => {
 
   return (
     <div>
-      <div className="project-section w-full min-h-screen">
+      <div className="project-section w-full min-h-screen px-6">
         <h2 className="text-center p-2 text-3xl font-fredoka font-bold ">
           Projects
         </h2>
         <div ref={lineRef} className=" border-2 rounded-2xl w-25 m-auto mb-10"></div>
-         <div className="project-cardRow flex justify-center gap-8 p-6">
+         <div className="project-cardRow flex flex-wrap justify-center gap-8 p-6">
         {projectCartData.map((item)=>(
           <ProjectCard
            key={item.id} 
