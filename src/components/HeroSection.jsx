@@ -44,7 +44,7 @@ const HeroSection = () => {
    
 
   return (
-    <div className="hero-main w-full md:px-10 px-6 min-h-[70vh] md:min-h-screen" ref={heroRef}>
+    <div className="hero-main w-full md:px-10 px-6 min-h-[80vh] md:min-h-screen" ref={heroRef}>
       <div className="w-full flex items-center  flex-col mt-20" ref={tlHero}>
         <div className="hero-image bg-amber-500  rounded-full overflow-hidden rotate-2 shadow-olive-500 shadow-xl border-2">
           <img src={myImage} className="md:w-40 md:h-40 w-30 h-30" />

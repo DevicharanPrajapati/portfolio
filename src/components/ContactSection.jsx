@@ -41,22 +41,22 @@ const ContactSection = () => {
 
             <div className="flex flex-col">
               <label htmlFor="name" className="font-space font-semibold">Full Name</label>
-              <input type="text" name="name" className="py-2 rounded-md shadow-md outline-none border-1 shadow-gray-300" />
+              <input type="text" name="name" className="p-2 rounded-md shadow-md outline-none border-1 shadow-gray-300" />
             </div>
 
             <div className="flex flex-col">
               <label htmlFor="email" className="font-space font-semibold">Email</label>
-              <input type="email" name="email" className="py-2 rounded-md shadow-md outline-none border-1 shadow-gray-300" />
+              <input type="email" name="email" className="p-2 rounded-md shadow-md outline-none border-1 shadow-gray-300" />
             </div>
 
             <div className="flex flex-col">
               <label htmlFor="num" className="font-space font-semibold">Mobile Number</label>
-              <input type="number" name="num" className="py-2 rounded-md shadow-md outline-none border-1 shadow-gray-300"/>
+              <input type="number" name="num" className="p-2 rounded-md shadow-md outline-none border-1 shadow-gray-300"/>
             </div>
 
              <div className="flex flex-col">
               <label htmlFor="feedback" className="font-space font-semibold">Feedback</label>
-              <textarea name="feedback" rows={2} className="py-2 rounded-md shadow-md outline-none border-1 shadow-gray-300"></textarea>
+              <textarea name="feedback" rows={2} className="p-2 rounded-md shadow-md outline-none border-1 shadow-gray-300"></textarea>
             </div>
             
             

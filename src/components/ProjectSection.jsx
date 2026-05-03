@@ -50,7 +50,7 @@ const ProjectSection = () => {
 
   return (
     <div>
-      <div className="project-section w-full min-h-screen px-6">
+      <div className="project-section w-fullh-screen px-6">
         <h2 className="text-center p-2 text-3xl font-fredoka font-bold ">
           Projects
         </h2>
