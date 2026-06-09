@@ -8,9 +8,9 @@ import { SiTailwindcss } from "react-icons/si";
 const ProjectCard = ({ title, description}) => {
  
   return (
-      <div className="card w-80 p-4 flex justify-between flex-col gap-3 border-1 rounded-2xl hover:shadow-xl shadow-gray-400 transition-all ease-in-out">
-        <div className="rounded-2xl overflow-hidden shadow-2xs shadow-olive-500">
-          <img src="https://png.pngtree.com/thumb_back/fh260/background/20240610/pngtree-computer-of-a-programmer-with-lines-code-of-software-image_15746003.jpg" />
+      <div className="card w-80 p-4 flex justify-between flex-col gap-3 border-2 rounded-2xl hover:shadow-xl shadow-gray-400 transition-all ease-in-out">
+        <div className="rounded-xl overflow-hidden shadow-2xs shadow-olive-500 hover:shadow-2xl hover:scale-05 transition-all duration-300">
+          <img src="..\src\assets\images\portfolio-image.png" />
         </div>
         <h3 className="font-fredoka font-semibold text-xl">
           {title}
@@ -27,11 +27,11 @@ const ProjectCard = ({ title, description}) => {
         </div>
         <div className="buttons flex justify-between">
           <button className="p-2 border-2 px-4 rounded-b-lg hover:text-slate-600 font-exo font-bold flex justify-center items-center gap-1">
-            GitHub
+            <a href="https://github.com/DevicharanPrajapati/portfolio">GitHub</a>
             <FaGithub />
           </button>
           <button className="border-2 px-4 rounded-b-lg hover:text-red-600 font-exo font-bold flex justify-center items-center gap-1">
-            Live
+            <a href="https://devicharan-portfolio.netlify.app/">Live</a>
             <MdLiveTv />
           </button>
         </div>

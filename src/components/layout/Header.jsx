@@ -45,7 +45,7 @@ const Header = () => {
       .timeline()
       .to(menuRef.current, {
         x: "0%",
-        duration: 0.5,
+        duration: 0.3,
         ease: "power3.out",
       })
       .from(".mobile-menu li", {
@@ -59,7 +59,7 @@ const Header = () => {
           y: -20,
           opacity: 0,
         },
-        "-=0.3",
+        "-=0.2",
       )
       .from(
         ".mobile-menu .close-menu",
@@ -67,7 +67,7 @@ const Header = () => {
           x: 20,
           opacity: 0,
         },
-        "-=0.5",
+        "-=0.3",
       )
       .reverse();
   }, []);
@@ -89,7 +89,7 @@ const Header = () => {
           <li className="cursor-pointer hover:text-indigo-700 ">Profile</li>
           <li className="cursor-pointer hover:text-indigo-700 ">Contact</li>
         </ul>
-        <button className="md:flex justify-center gap-2 items-center px-4 py-2 border-2 border-black rounded-md text-bold font-exo text-md hidden">
+        <button className="md:flex justify-center gap-2 items-center px-4 py-2 border-2 border-black rounded-md text-bold font-exo text-md hidden cursor-pointer hover:bg-indigo-200">
           <CiSaveDown2 className="text-base sm:text-md md:text-xl text-black" />
           Resume
         </button>
@@ -118,7 +118,7 @@ const Header = () => {
             <li>Projects</li>
             <li>Contact</li>
           </ul>
-          <button className="flex justify-center gap-2 items-center px-2 md:px-4 py-2 border-2 border-black rounded-md text-bold font-exo text-lg cursor-pointer ">
+          <button className="flex justify-center gap-2 items-center px-2 md:px-4 py-2 border-2 border-black rounded-md text-bold font-exo text-lg cursor-pointer">
             <CiSaveDown2 className="text-gl font-bold "/>
             Resume
           </button>

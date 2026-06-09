@@ -20,7 +20,7 @@ const ContactSection = () => {
     });
   });
   return (
-    <div className="min-h-screen px-10">
+    <div className="min-h-screen px-10 pt-10 md:pt-20" id="contact">
       <h2 className="text-center text-2xl md:text-3xl font-fredoka font-semibold">
         Contact
       </h2>
@@ -40,22 +40,22 @@ const ContactSection = () => {
           <form className="p-2 flex flex-col gap-5">
 
             <div className="flex flex-col">
-              <label htmlFor="name" className="font-space font-semibold">Full Name</label>
+              <label id="name" className="font-space font-semibold">Full Name</label>
               <input type="text" name="name" className="p-2 rounded-md shadow-md outline-none border-1 shadow-gray-300" />
             </div>
 
             <div className="flex flex-col">
-              <label htmlFor="email" className="font-space font-semibold">Email</label>
+              <label id="email" className="font-space font-semibold">Email</label>
               <input type="email" name="email" className="p-2 rounded-md shadow-md outline-none border-1 shadow-gray-300" />
             </div>
 
             <div className="flex flex-col">
-              <label htmlFor="num" className="font-space font-semibold">Mobile Number</label>
+              <label id="num" className="font-space font-semibold">Mobile Number</label>
               <input type="number" name="num" className="p-2 rounded-md shadow-md outline-none border-1 shadow-gray-300"/>
             </div>
 
              <div className="flex flex-col">
-              <label htmlFor="feedback" className="font-space font-semibold">Feedback</label>
+              <label id="feedback" className="font-space font-semibold">Feedback</label>
               <textarea name="feedback" rows={2} className="p-2 rounded-md shadow-md outline-none border-1 shadow-gray-300"></textarea>
             </div>
             

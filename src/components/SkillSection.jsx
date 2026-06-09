@@ -46,7 +46,7 @@ const skillsData = [
   useGSAP(() => {
     gsap.from(lineRef.current, {
       width: 0,
-      duration: 0.7,
+      duration: 0.5,
       opacity: 0,
       ease: "power3.out",
       scrollTrigger: {
@@ -69,7 +69,7 @@ const skillsData = [
     tl.from(".skill-core", {
       y: 50,
       opacity: 0,
-      duration: 0.7,
+      duration: 0.5,
       ease: "power3.out",
     })
 
@@ -78,7 +78,7 @@ const skillsData = [
         y: 50,
         opacity: 0,
         stagger: 0.2,
-        duration: 0.7,
+        duration: 0.5,
         ease: "power3.out",
       });
   });
