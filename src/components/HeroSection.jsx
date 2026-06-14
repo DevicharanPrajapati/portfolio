@@ -24,8 +24,8 @@ const HeroSection = () => {
         .from("img", {
           y: 50,
           opacity: 0,
-          duration: 0.7,
-          ease: "power3.out",
+          duration: 0.5,
+          ease: "expo.out",
         })
         .from(split.chars, {
           y: -40,
