@@ -10,7 +10,7 @@ const ProjectCard = ({ title, description}) => {
   return (
       <div className="card w-80 p-4 flex justify-between flex-col gap-3 border-2 rounded-2xl hover:shadow-xl shadow-gray-400 transition-all ease-in-out">
         <div className="rounded-xl overflow-hidden shadow-2xs shadow-olive-500 hover:shadow-2xl hover:scale-05 transition-all duration-300">
-          <img src="..\src\assets\images\portfolio-image.png" />
+          <img src="../public/portfolio-image.png"/>
         </div>
         <h3 className="font-fredoka font-semibold text-xl">
           {title}
