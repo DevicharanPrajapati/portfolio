@@ -46,8 +46,8 @@ const ProjectSection = () => {
   });
 
   return (
-    <div id="projects">
-      <div className="project-section w-fullh-screen px-6">
+    <div id="projects" className="scroll-mt-15">
+      <div className="project-section  w-fullh-screen px-6 ">
         <h2 className="text-center p-2 text-3xl font-fredoka font-bold ">
           Projects
         </h2>

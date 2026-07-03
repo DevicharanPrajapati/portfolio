@@ -40,11 +40,11 @@ const HeroSection = () => {
 
   return (
     <div
-      className="hero-main w-full md:px-10 px-6 min-h-[80vh] md:min-h-screen items-center"
+      className="hero-main scroll-mt-22 w-full md:px-10 px-6 min-h-[80vh] md:min-h-screen items-center"
       ref={heroRef}
       id="home"
     >
-      <div className="w-full flex items-center  flex-col mt-10 " ref={tlHero} >
+      <div className="w-full flex items-center  flex-col mt-10 " ref={tlHero}>
         <div className="hero-image bg-amber-500  rounded-full overflow-hidden rotate-2 shadow-olive-500 shadow-xl border-2">
           <img src={myImage} className="md:w-40 md:h-40 w-32 h-32 " />
         </div>
@@ -64,12 +64,26 @@ const HeroSection = () => {
               efficient backend solutions.
             </p>
             <div className="flex gap-6">
-              <button className=" text-black bg-indigo-400 px-2 py-2 md:px-6 md:py-3 rounded-lg border-2 border-black font-bold w-max hover:bg-indigo-500  transition duration-300 cursor-pointer">
-                <a href="#projects">Explore My Work</a>
+              <button
+                onClick={() => {
+                  document.getElementById("projects")?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }}
+                className=" text-black bg-indigo-400 px-2 py-2 md:px-6 md:py-3 rounded-lg border-2 border-black font-bold w-max hover:bg-indigo-500  transition duration-300 cursor-pointer"
+              >
+                Explore My Work
               </button>
 
-              <button className=" text-black px-2 py-2 md:px-6 md:py-3 rounded-lg border-2 border-black font-bold w-max hover:bg-indigo-400 transition duration-300 cursor-pointer">
-                <a href="#contact">Contact Me</a>
+              <button
+                onClick={() => {
+                  document.getElementById("contact")?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }}
+                className=" text-black px-2 py-2 md:px-6 md:py-3 rounded-lg border-2 border-black font-bold w-max hover:bg-indigo-400 transition duration-300 cursor-pointer"
+              >
+                Contact Me
               </button>
             </div>
           </div>

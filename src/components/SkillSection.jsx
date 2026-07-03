@@ -188,7 +188,7 @@ const SkillSection = () => {
   });
 
   return (
-    <div className="Skill-main min-h-[80vh] md:min-h-screen w-full px-4 sm:px-6 md:px-10 mt-2 sm:mt-7 mb-10" id="skills">
+    <div className="Skill-main scroll-mt-15 min-h-[80vh] md:min-h-screen w-full px-4 sm:px-6 md:px-10 mt-2 sm:mt-7 mb-10" id="skills">
       <h2 className="text-center p-2 text-2xl sm:text-3xl font-fredoka font-bold">
         My Skills
       </h2>
