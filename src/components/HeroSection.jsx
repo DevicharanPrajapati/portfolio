@@ -65,11 +65,11 @@ const HeroSection = () => {
             </p>
             <div className="flex gap-6">
               <button className=" text-black bg-indigo-400 px-2 py-2 md:px-6 md:py-3 rounded-lg border-2 border-black font-bold w-max hover:bg-indigo-500  transition duration-300 cursor-pointer">
-                Explore My Work
+                <a href="#projects">Explore My Work</a>
               </button>
 
               <button className=" text-black px-2 py-2 md:px-6 md:py-3 rounded-lg border-2 border-black font-bold w-max hover:bg-indigo-400 transition duration-300 cursor-pointer">
-                Contact Me
+                <a href="#contact">Contact Me</a>
               </button>
             </div>
           </div>

@@ -1,0 +1,11 @@
+.logo{
+  -webkit-text-stroke: 2px rgba(13, 12, 12, 0.66);
+  color:transparent;
+}
+@media screen and (max-width: 768px) {
+  .logo{
+    -webkit-text-stroke: 1px rgba(13, 12, 12, 0.66);
+    color:transparent;
+  }
+  
+}

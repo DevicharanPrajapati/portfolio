@@ -14,18 +14,20 @@ const ProjectSection = () => {
     {
       id: 1,
       title: "Portfolio Website",
-      description: "A modern and responsive personal portfolio showcasing my skills, projects, and web development journey.",
+      description:
+        "A modern and responsive personal portfolio showcasing my skills, projects, and web development journey.",
       imageUrl: `${portfolioImg}`,
       githubUrl: "https://github.com/DevicharanPrajapati/portfolio",
-      liveUrl : "https://devicharan-portfolio.netlify.app/"
+      liveUrl: "https://devicharan-portfolio.netlify.app/",
     },
     {
       id: 2,
       title: "ExpenseTracker",
-      description: "A full-stack MERN expense tracker with JWT authentication, bcrypt password hashing, secure transaction management, and interactive analytics.",
+      description:
+        "A full-stack MERN expense tracker with JWT authentication, bcrypt password hashing, secure transaction management, and interactive analytics.",
       imageUrl: `${ExpenseTrackerImg}`,
       githubUrl: "https://github.com/DevicharanPrajapati/Expense-Tracker",
-      liveUrl : "https://expense-tracker-eight-zeta-12.vercel.app/"
+      liveUrl: "https://expense-tracker-eight-zeta-12.vercel.app/",
     },
   ];
 
@@ -45,7 +47,7 @@ const ProjectSection = () => {
 
   return (
     <div id="projects">
-      <div className="project-section w-fullh-screen px-6" >
+      <div className="project-section w-fullh-screen px-6">
         <h2 className="text-center p-2 text-3xl font-fredoka font-bold ">
           Projects
         </h2>
@@ -60,6 +62,8 @@ const ProjectSection = () => {
               title={item.title}
               description={item.description}
               images={item.imageUrl}
+              githubUrl={item.githubUrl}
+              liveUrl={item.liveUrl}
             />
           ))}
         </div>
